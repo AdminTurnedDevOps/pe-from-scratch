@@ -4,7 +4,7 @@
 
 ### On-Prem
 
-https://github.com/AdminTurnedDevOps/Kubernetes-Quickstart-Environments/tree/main/Bare-Metal/kubeadm
+https://github.com/AdminTurnedDevOps/Kubernetes-Quickstart-Environments/tree/main/Bare-Metal/kubeadm-cilium
 
 
 ### AKS
