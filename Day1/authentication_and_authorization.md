@@ -63,3 +63,7 @@ az role assignment create \
 ```
 
 ## Keycloak
+
+
+
+## Microsoft Entra
