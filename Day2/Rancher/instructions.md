@@ -27,9 +27,9 @@ helm install \
 3. Install Rancher
 
 ```
-helm repo add rancher-stable https://releases.rancher.com/server-charts/latest
+helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
 
-helm install rancher rancher-stable/rancher \
+helm install rancher rancher-latest/rancher \
   --namespace cattle-system \
   --set hostname=rancher.my.org \
   --set replicas=3 \
@@ -55,7 +55,12 @@ docker run -d --restart=unless-stopped \
   rancher/rancher:latest
 ```
 
+2. Retrieve the container id
+```
+docker container ls
+```
+
 2. Retrieve initial password
-docker logs b431b6263291 2>&1 | grep "Bootstrap Password:"
+docker logs YOUR_RANCHER_CONTAINER_ID 2>&1 | grep "Bootstrap Password:"
 
 3. Log in and register cluster.
