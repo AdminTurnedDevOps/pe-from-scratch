@@ -7,7 +7,8 @@ kind: Provider
 metadata:
   name: upbound-provider-azure
 spec:
-  package: xpkg.upbound.io/upbound/provider-azure:v0.29.0
+  package: 
+    xpkg.upbound.io/upbound/provider-azure-network:v0.34.0
 EOF
 ```
 
@@ -51,6 +52,21 @@ EOF
 
 ```
 cat <<EOF | kubectl create -f -
+apiVersion: network.azure.upbound.io/v1beta1
+kind: VirtualNetwork
+metadata:
+  name: vnet
+spec:
+  forProvider:
+    addressSpace:
+      - 192.168.0.0/16
+    location: "East US"
+    resourceGroupName: devrelasaservice
+EOF
+```
+
+```
+cat <<EOF | kubectl delete -f -
 apiVersion: network.azure.upbound.io/v1beta1
 kind: VirtualNetwork
 metadata:
