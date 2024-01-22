@@ -131,7 +131,7 @@ helm repo update
 
 ```
 CLUSTER_NAME=
-API_KEY=d294d28963777eb614f20086c7cc8931
+API_KEY=
 ```
 
 ```
